@@ -13,6 +13,9 @@
 		1884A7471D2A4DF200B9AE76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1884A7451D2A4DF200B9AE76 /* Main.storyboard */; };
 		1884A7491D2A4DF200B9AE76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1884A7481D2A4DF200B9AE76 /* Assets.xcassets */; };
 		1884A74C1D2A4DF200B9AE76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1884A74A1D2A4DF200B9AE76 /* LaunchScreen.storyboard */; };
+		1884A7581D2A4EF800B9AE76 /* LNTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1884A7571D2A4EF800B9AE76 /* LNTextView.m */; };
+		1884A75B1D2A573700B9AE76 /* LNEmojiKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1884A75A1D2A573700B9AE76 /* LNEmojiKeyboard.m */; };
+		1884A7601D2A5BE500B9AE76 /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1884A75F1D2A5BE500B9AE76 /* Emoticons.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		1884A7481D2A4DF200B9AE76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1884A74B1D2A4DF200B9AE76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1884A74D1D2A4DF200B9AE76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1884A7561D2A4EF800B9AE76 /* LNTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNTextView.h; sourceTree = "<group>"; };
+		1884A7571D2A4EF800B9AE76 /* LNTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNTextView.m; sourceTree = "<group>"; };
+		1884A7591D2A573700B9AE76 /* LNEmojiKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNEmojiKeyboard.h; sourceTree = "<group>"; };
+		1884A75A1D2A573700B9AE76 /* LNEmojiKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNEmojiKeyboard.m; sourceTree = "<group>"; };
+		1884A75F1D2A5BE500B9AE76 /* Emoticons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emoticons.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +66,12 @@
 		1884A73B1D2A4DF200B9AE76 /* LNEmojiKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				1884A7541D2A4ED900B9AE76 /* LNEmojiKeyboard */,
 				1884A73F1D2A4DF200B9AE76 /* AppDelegate.h */,
 				1884A7401D2A4DF200B9AE76 /* AppDelegate.m */,
 				1884A7421D2A4DF200B9AE76 /* ViewController.h */,
 				1884A7431D2A4DF200B9AE76 /* ViewController.m */,
+				1884A75F1D2A5BE500B9AE76 /* Emoticons.bundle */,
 				1884A7451D2A4DF200B9AE76 /* Main.storyboard */,
 				1884A7481D2A4DF200B9AE76 /* Assets.xcassets */,
 				1884A74A1D2A4DF200B9AE76 /* LaunchScreen.storyboard */,
@@ -77,6 +87,25 @@
 				1884A73D1D2A4DF200B9AE76 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1884A7541D2A4ED900B9AE76 /* LNEmojiKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				1884A7551D2A4ED900B9AE76 /* LNTextView */,
+				1884A7591D2A573700B9AE76 /* LNEmojiKeyboard.h */,
+				1884A75A1D2A573700B9AE76 /* LNEmojiKeyboard.m */,
+			);
+			path = LNEmojiKeyboard;
+			sourceTree = "<group>";
+		};
+		1884A7551D2A4ED900B9AE76 /* LNTextView */ = {
+			isa = PBXGroup;
+			children = (
+				1884A7561D2A4EF800B9AE76 /* LNTextView.h */,
+				1884A7571D2A4EF800B9AE76 /* LNTextView.m */,
+			);
+			path = LNTextView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1884A74C1D2A4DF200B9AE76 /* LaunchScreen.storyboard in Resources */,
+				1884A7601D2A5BE500B9AE76 /* Emoticons.bundle in Resources */,
 				1884A7491D2A4DF200B9AE76 /* Assets.xcassets in Resources */,
 				1884A7471D2A4DF200B9AE76 /* Main.storyboard in Resources */,
 			);
@@ -150,6 +180,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1884A7441D2A4DF200B9AE76 /* ViewController.m in Sources */,
+				1884A7581D2A4EF800B9AE76 /* LNTextView.m in Sources */,
+				1884A75B1D2A573700B9AE76 /* LNEmojiKeyboard.m in Sources */,
 				1884A7411D2A4DF200B9AE76 /* AppDelegate.m in Sources */,
 				1884A73E1D2A4DF200B9AE76 /* main.m in Sources */,
 			);

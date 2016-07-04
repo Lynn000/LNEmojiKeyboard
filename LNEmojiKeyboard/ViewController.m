@@ -7,8 +7,14 @@
 //
 
 #import "ViewController.h"
+#import "LNTextView.h"
+#import "LNEmojiKeyboard.h"
 
 @interface ViewController ()
+
+@property (nonatomic,strong) LNTextView *textView;
+
+@property (nonatomic, strong) LNEmojiKeyboard *keyboard;
 
 @end
 
@@ -16,12 +22,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    self.textView = [[LNTextView alloc]initWithPlaceHolder:@"交流"];
+    self.textView.frame = CGRectMake(150, 150, 200, 200);
+    self.textView.backgroundColor = [UIColor redColor];
+
+    [self.view addSubview:self.textView];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(200, 100, 50, 50);
+    button.backgroundColor = [UIColor blueColor];
+    
+    [button addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+    
+    
+    // 创建表情键盘对象
+    self.keyboard = [[LNEmojiKeyboard alloc]initWithBundleName:@"" andFilePathArray:@[]];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)btnClick{
+    
+    //切换表情键盘
+    self.textView.inputView = self.textView.inputView == nil? self.keyboard:nil;
+    [self.textView reloadInputViews];
 }
 
 @end
