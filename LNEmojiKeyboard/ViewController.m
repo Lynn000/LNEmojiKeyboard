@@ -38,7 +38,7 @@
     
     
     // 创建表情键盘对象
-    self.keyboard = [[LNEmojiKeyboard alloc]initWithBundleName:@"" andFilePathArray:@[]];
+    self.keyboard = [[LNEmojiKeyboard alloc]initWithBundleName:@"Emoticons.bundle" andFilePathArray:@[@"com.apple.emoji",@"com.sina.default",@"com.sina.lxh"]];
     
 }
 

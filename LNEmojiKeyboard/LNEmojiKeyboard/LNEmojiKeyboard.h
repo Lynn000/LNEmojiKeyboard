@@ -14,7 +14,7 @@
 @interface LNEmojiKeyboard : UIView
 
 // 根据所给包名称 文件路径数组 设置表情包数据
-- (instancetype)initWithBundleName:(NSString *)bundleName andFilePathArray:(NSArray *)filePathArray;
+- (instancetype)initWithBundleName:(NSString *)bundleName andFilePathArray:(NSArray<NSString *> *)filePathArray;
 
 
 
